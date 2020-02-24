@@ -2,7 +2,7 @@ import java.util.*
 
 fun main(arr:Array<String>) {
 
-    print("${ if(arr[0].toInt() < 12) "Good morning, Kotlin!" else "Good night, Kotlin!" }")
+    feedTheFish()
 }
 
 fun dayOfTheWeek(){
@@ -27,5 +27,45 @@ fun dayOfTheWeek(){
         else -> "It's the D day!"
     })
 
+}
+
+fun feedTheFish(){
+    val day = randomDay()
+    val food = fishFood(day)
+
+    println("This is $day and fish eats $food")
+
+    if(shouldChangeWater(day)){
+        println("Change the water for Fish Tank")
+    }
+
+}
+fun randomDay(): String{
+
+    val list = listOf("MONDAY","TUESDAY","WEDNSDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY")
+    return list[Random().nextInt(7)]
+
+}
+
+fun fishFood(day: String): String{
+
+    return when(day){
+        "MONDAY" -> "flakes"
+        "WEDNSDAY" -> "pelletes"
+        "FRIDAY" -> "redworms"
+        "SUNDAY" -> "redworms"
+        else -> {
+            "algae"
+        }
+    }
+}
+
+fun shouldChangeWater(day: String, temperature: Int = 22, dirty: Int = 20): Boolean{
+
+    return when(day){
+        "FRIDAY" -> true
+        "TUESDAY" -> true
+        else -> false
+    }
 
 }

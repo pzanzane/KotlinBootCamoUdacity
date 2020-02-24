@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3099d47a-7d81-48ec-b51e-b9f57935d57c" name="Default Changelist" comment="" />
+    <list default="true" id="3099d47a-7d81-48ec-b51e-b9f57935d57c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AMS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/AMS.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +21,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1XfIIyCdPS7GgtFCS7dnfGmJPzR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,8 +36,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.AMSKt">
     <configuration name="AMSKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Hello Kotlin" />
       <option name="VM_PARAMETERS" value="" />
@@ -43,9 +52,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FortuneCookieKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="Hello Kotlin" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="FortuneCookieKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.AMSKt" />
+        <item itemvalue="Kotlin.FortuneCookieKt" />
       </list>
     </recent_temporary>
   </component>
@@ -79,26 +102,31 @@
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="104" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.723@0.23.1280.723" timestamp="1581950442925" />
-    <state width="1218" height="309" key="GridCell.Tab.0.bottom" timestamp="1581958920837">
-      <screen x="0" y="23" width="1280" height="723" />
+    <state width="1218" height="134" key="GridCell.Tab.0.bottom" timestamp="1582553740137">
+      <screen x="0" y="23" width="1280" height="721" />
     </state>
+    <state width="1218" height="134" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1582553740137" />
     <state width="1218" height="309" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1581958920837" />
-    <state width="1218" height="309" key="GridCell.Tab.0.center" timestamp="1581958920836">
-      <screen x="0" y="23" width="1280" height="723" />
+    <state width="1218" height="134" key="GridCell.Tab.0.center" timestamp="1582553740136">
+      <screen x="0" y="23" width="1280" height="721" />
     </state>
+    <state width="1218" height="134" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1582553740136" />
     <state width="1218" height="309" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1581958920836" />
-    <state width="1218" height="309" key="GridCell.Tab.0.left" timestamp="1581958920835">
-      <screen x="0" y="23" width="1280" height="723" />
+    <state width="1218" height="134" key="GridCell.Tab.0.left" timestamp="1582553740136">
+      <screen x="0" y="23" width="1280" height="721" />
     </state>
+    <state width="1218" height="134" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1582553740136" />
     <state width="1218" height="309" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1581958920835" />
-    <state width="1218" height="309" key="GridCell.Tab.0.right" timestamp="1581958920836">
-      <screen x="0" y="23" width="1280" height="723" />
+    <state width="1218" height="134" key="GridCell.Tab.0.right" timestamp="1582553740137">
+      <screen x="0" y="23" width="1280" height="721" />
     </state>
+    <state width="1218" height="134" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1582553740137" />
     <state width="1218" height="309" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1581958920836" />
-    <state x="294" y="217" key="com.intellij.ide.util.TipDialog" timestamp="1581948706155">
-      <screen x="0" y="23" width="1280" height="723" />
+    <state x="294" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1582550825649">
+      <screen x="0" y="23" width="1280" height="721" />
     </state>
     <state x="294" y="215" key="com.intellij.ide.util.TipDialog/0.23.1280.716@0.23.1280.716" timestamp="1581517262170" />
+    <state x="294" y="216" key="com.intellij.ide.util.TipDialog/0.23.1280.721@0.23.1280.721" timestamp="1582550825649" />
     <state x="294" y="217" key="com.intellij.ide.util.TipDialog/0.23.1280.723@0.23.1280.723" timestamp="1581948706155" />
   </component>
 </project>
