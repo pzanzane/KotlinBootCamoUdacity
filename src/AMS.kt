@@ -2,7 +2,7 @@ import java.util.*
 
 fun main(arr:Array<String>) {
 
-    feedTheFish()
+    print(whatShouldIDoToday("sad"))
 }
 
 fun dayOfTheWeek(){
@@ -68,4 +68,27 @@ fun shouldChangeWater(day: String, temperature: Int = 22, dirty: Int = 20): Bool
         else -> false
     }
 
+}
+
+fun canAddFish(tankSize: Int, currentFish:List<Int>, fishSize: Int = 2, hasDecoration:Boolean = true): Boolean{
+
+    val allowedFishSize = if(hasDecoration)  tankSize.times(80).div(100) else tankSize
+    val totalFishLength =  currentFish.sum()
+
+    val remainingFishLength = allowedFishSize - totalFishLength
+
+    if(remainingFishLength < fishSize){
+        //Do not add fish
+        return false
+    }
+
+    return true
+}
+
+fun whatShouldIDoToday(mood: String, weather: String = "sunny", temperature: Int = 24): String{
+
+    return when{
+        mood == "happy" && weather == "sunny" -> "Go for a walk"
+        else -> "Stay home and Read"
+    }
 }
