@@ -1,0 +1,8 @@
+/* Constructors */
+1.  Kotlin can have one primary constructor
+2.  Secondary constructor with keywork "constructor", should call to another constructor ultimately leading to primary constructor
+    using :this() keyword
+3.  Goog Kotlin class should have one constructor with default values, if we are considering have secondary constructor
+    we should also consider having helper merthode to create object from constructor with default values.
+4.  init{} blocks are blocks which are executed right after primary constructor.
+    init blocks can be anywhere in code, properties which we want to access in init blocks should be declared before init blocks
