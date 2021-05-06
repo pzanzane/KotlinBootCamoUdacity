@@ -14,3 +14,10 @@
 4. Protected inside of class and subclass can see it.
 5. internal is visible to module, Module is "All the files compiled together", so technically, internal modifier inside
     of app will be visible to whole app, internal modifier inside of library will only be visible to library.
+
+/* Methods */
+1. By default methode return Kotlin.Unit
+2. We can have Single line methode without parenthesis
+3. We can have default values to methode parameters, we can ignore those params and default values will be set to param.
+   Non default value params should be declared before default params as a Standard Practice
+4. We can use named params to pass value in different order than they have defined.

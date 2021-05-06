@@ -1,4 +1,4 @@
-package ams
+package practice
 
 fun main(arr: Array<String>) {
     val birthday = getBirthday
