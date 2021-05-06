@@ -1,8 +1,16 @@
 /* Constructors */
 1.  Kotlin can have one primary constructor
-2.  Secondary constructor with keywork "constructor", should call to another constructor ultimately leading to primary constructor
+2.  Secondary constructor with keyword "constructor", should call to another constructor ultimately leading to primary constructor
     using :this() keyword
 3.  Goog Kotlin class should have one constructor with default values, if we are considering have secondary constructor
     we should also consider having helper merthode to create object from constructor with default values.
 4.  init{} blocks are blocks which are executed right after primary constructor.
     init blocks can be anywhere in code, properties which we want to access in init blocks should be declared before init blocks
+
+/* Accessibility modifiers *
+1. 4 modifiers, Public, Private, protected, internal.
+2. Default modifier is "Public"
+3. Private is inside of a class only, no subclass can see it.
+4. Protected inside of class and subclass can see it.
+5. internal is visible to module, Module is "All the files compiled together", so technically, internal modifier inside
+    of app will be visible to whole app, internal modifier inside of library will only be visible to library.
