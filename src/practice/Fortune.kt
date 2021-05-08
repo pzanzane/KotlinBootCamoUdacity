@@ -1,9 +1,16 @@
 package practice
 
 fun main(arr: Array<String>) {
-    val birthday = getBirthday
-    val fortune = fortuneCookie(birthday)
-    println("Your fortune for the Birthday $birthday $fortune")
+
+    for(i in 1..2) {
+        val birthday = getBirthday
+        val fortune = fortuneCookie(birthday)
+        println("Your fortune for the Birthday $birthday $fortune")
+
+        if(fortune == "Fortune6") {
+            break
+        }
+    }
 }
 
 fun fortuneCookie(dayOfTheMonth: Int): String {
