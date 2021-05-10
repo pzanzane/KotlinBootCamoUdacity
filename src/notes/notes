@@ -34,3 +34,9 @@
 2. data class, creates an implementation of class with toString, equals and hascode for all
    declared variables in primary constructor.
    data class, can have secondary constructor.
+   We can destructre data class, Normal class cannot be destructure unless we have componentN() function declared.
+
+/* Special Collection*/
+1. Pair<A,B>, Triple<A,B,C>
+   We can use these special collection to return more than one value from function.
+   We can destructure Pair and Triple.

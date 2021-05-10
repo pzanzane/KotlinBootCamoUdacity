@@ -1,15 +1,30 @@
 package books
 
-open class Book(title:String, author:String) {
+open class Book(val title:String, val author:String, val year: Int) {
 
     private var currentPage = 0;
     open fun readPage() = currentPage.inc()
+
+    fun titleAuthor(): Pair<String, String> {
+        return title to author
+    }
+
+    fun titleAuthorYear(): Triple<String, String, Int> {
+        return Triple(title, author, year)
+    }
 }
 
 class EBook(title:String,
             author:String,
+            year:Int,
             format:String = "text")
-            :Book(title, author) {
+            :Book(title, author, year) {
     private var wordCount = 0;
     override fun readPage() = wordCount.plus(250)
+}
+
+fun main(arr: Array<String>) {
+    val book = Book("Effective Java", "Joshua Bloch", 2005)
+    val (title, author, year) = book.titleAuthorYear()
+    println("Here is your book $title written by $author in $year")
 }
