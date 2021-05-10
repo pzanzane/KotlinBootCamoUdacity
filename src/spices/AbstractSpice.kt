@@ -6,7 +6,7 @@ fun main(arr: Array<String>) {
     spice.prepareSpice()
 }
 
-abstract class AbstractSpice(name:String,
+sealed class AbstractSpice(name:String,
                              curryColor: CurryColor,
                              level:String = "mild") : CurryColor by curryColor {
     abstract fun prepareSpice()
@@ -19,7 +19,7 @@ class Curry(name: String,
     AbstractSpice(name, curryColor, level),
     Grinder by grinder{
     override fun prepareSpice() {
-        println("Preparing ${color} curry")
+        println("Preparing ${color.name} curry")
     }
 }
 
@@ -28,15 +28,19 @@ interface Grinder {
 }
 
 interface CurryColor {
-    val color: String
+    val color: Color
 }
 
 object YellowColor : CurryColor {
-    override val color: String = "Yellow"
+    override val color: Color = Color.YELLOW
 }
 
 object MixerGrinder: Grinder {
     override fun grind() {
         println("Grinding")
     }
+}
+
+enum class Color(rgb:Int) {
+    RED(0xFF0000), GREEN(0x00FF00), BLUE(0x0000FF), YELLOW(0xFFFF00)
 }

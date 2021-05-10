@@ -5,8 +5,7 @@ fun main(arr: Array<String>) {
         Spice(name = "curry2", level = "hot"),
         Spice(name = "curry3", level = "hot"),
         Spice(name = "curry4", level = "medium"),
-        Spice(name = "curry5", level = "mild"),
-        makeSalt())
+        Spice(name = "curry5", level = "mild"))
 
     spice.filter { it.heat < 5 }.toList().forEach { item -> println("Spices ${item.name} -> ${item.heat}")}
 }
