@@ -21,3 +21,8 @@
 3. We can have default values to methode parameters, we can ignore those params and default values will be set to param.
    Non default value params should be declared before default params as a Standard Practice
 4. We can use named params to pass value in different order than they have defined.
+
+/* interface delegation */
+1. Kotlin way of creating proxy pattern is using "by" keyword while implementing interface.
+2. Syntax "interfaceName" by "implementationObjectName".
+3. All calls for the interface methods are delegated to implementation object.
