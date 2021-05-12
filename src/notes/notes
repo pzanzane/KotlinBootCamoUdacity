@@ -47,4 +47,16 @@
 2. Const can be used either ar Top level at outside of class, in object class (Singleton)
    or in Companion object inside normal class, it cannot be used directly inside of normal class.
 
-/* */
+/* Extensions */
+1. Extension function, Extension Property, receiver nullable
+2. Extension function
+   These extensions are statically applied to type of class, which means parent extension and child extension will
+   be different and cannot be override
+   These extension can only use public variable and methods
+
+3. Extension Property
+   Similar to extension function.
+   We have to specify get() in case of val and get() set() in case of var to create extension property.
+
+4. Receiver null extensions, are extensions which can receive null.
+   Defined as ClassName?.extensionName, we can call this extension on null object without null safety
