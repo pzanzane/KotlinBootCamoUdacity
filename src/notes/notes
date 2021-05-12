@@ -40,3 +40,11 @@
 1. Pair<A,B>, Triple<A,B,C>
    We can use these special collection to return more than one value from function.
    We can destructure Pair and Triple.
+
+/* Constants */
+/* URL: https://classroom.udacity.com/courses/ud9011/lessons/ff6e5f4e-569e-4a3b-922f-be6a5d961f50/concepts/7ad9abbc-1f3f-4753-a556-89ad0072fc39*/
+1. Const keyword is used to create compile time constants
+2. Const can be used either ar Top level at outside of class, in object class (Singleton)
+   or in Companion object inside normal class, it cannot be used directly inside of normal class.
+
+/* */
