@@ -60,3 +60,6 @@
 
 4. Receiver null extensions, are extensions which can receive null.
    Defined as ClassName?.extensionName, we can call this extension on null object without null safety
+
+/* Generics */
+1.
