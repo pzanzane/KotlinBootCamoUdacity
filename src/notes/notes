@@ -61,5 +61,18 @@
 4. Receiver null extensions, are extensions which can receive null.
    Defined as ClassName?.extensionName, we can call this extension on null object without null safety
 
-/* Generics */
-1.
+/* Generics in out*/
+1. It is related to problem of PECS (Producer Extends Consumer Supers)
+    JAVA : https://stackoverflow.com/a/4343547/1112856
+    Kotlin: https://stackoverflow.com/a/45516961/1112856
+            https://stackoverflow.com/a/65648074/1112856
+
+/* Generic function inline(copy pasting function code),
+    reified (real types), types, star projection, type erasures*/
+1. inline - inline function specifies to the compiler that it needs to cpy past function code
+   in the place where function is called.
+2. reified, can specifies the compiler to use actual type which is being used when function is called.
+   This can only be done if function is inline, because compiler generates new code while copy pasting
+   inline function and use real type.
+3. If we don't care about generic type we can use "*" type.
+4. Type erasure - Compiler create correct code for generic type and all generic is removed after code is compiled.
