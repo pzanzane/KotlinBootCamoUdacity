@@ -76,3 +76,33 @@
    inline function and use real type.
 3. If we don't care about generic type we can use "*" type.
 4. Type erasure - Compiler create correct code for generic type and all generic is removed after code is compiled.
+
+
+/* Annotations */
+1. Annotation attach the metadata to the code, this metadata can be used by compiler to generate code or even logic.
+   We create annotation using syntax "annotation class AnnotationName"
+
+/* Labels */
+1. We can create label using syntax "labelname@" and using label "@lablename"
+   Generally label are using in label break.
+
+/* Standard library functions */
+1. Few common function
+   apply, also -> Returns the object
+   apply uses lambda as extension to object type.
+   T.apply(block:T.()->Unit)
+
+   also  uses lambda as normal function which accepts object type
+   T.also(block:(T)->Unit)
+
+   run, let -> Returns lambda result
+   run uses lambda as extension to object type.
+   T.run(block: T.() -> Unit)
+
+   let  uses lambda as normal function which accepts object type
+   T.let(block: (T) -> Unit)
+
+/* Inline */
+1. Inline is either used for reified generics or on higher order functions
+2. When inline with higher order functions, it will replace function call with function code.
+   This will avoid object creation of lambda also one less function call.
