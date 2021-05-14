@@ -1,7 +1,23 @@
 import aquarium.Aquarium
+import java.util.*
+
+val random : Int
+    get() = Random().nextInt()
+
+val random2 : Int = Random().nextInt()
+
+lateinit var value: Aquarium
+
+val value2: Aquarium by lazy { Aquarium(1,1,1) }
 
 fun main(arr:Array<String>){
-    buildAquarium();
+    repeat(5) {
+        println("Random $random")
+    }
+
+    repeat(5) {
+        println("Random2 $random2")
+    }
 }
 
 fun buildAquarium() {

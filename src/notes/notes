@@ -2,8 +2,8 @@
 1.  Kotlin can have one primary constructor
 2.  Secondary constructor with keyword "constructor", should call to another constructor ultimately leading to primary constructor
     using :this() keyword
-3.  Goog Kotlin class should have one constructor with default values, if we are considering have secondary constructor
-    we should also consider having helper merthode to create object from constructor with default values.
+3.  Good Kotlin class should have one constructor with default values, if we are considering have secondary constructor
+    we should also consider having helper method to create object from constructor with default values.
 4.  init{} blocks are blocks which are executed right after primary constructor.
     init blocks can be anywhere in code, properties which we want to access in init blocks should be declared before init blocks
 
@@ -12,6 +12,7 @@
 2. Default modifier is "Public"
 3. Private is inside of a class only, no subclass can see it.
 4. Protected inside of class and subclass can see it. Protected cannot be applied on Class
+    Protected cannot be use on Top-Level in other words cannot be used for members of package scope and can be used for inside of class scope only.
 5. internal is visible to module, Module is "All the files compiled together", so technically, internal modifier inside
     of app will be visible to whole app, internal modifier inside of library will only be visible to library.
 
@@ -24,14 +25,17 @@
 
 /* interface delegation */
 1. Kotlin way of creating proxy pattern is using "by" keyword while implementing interface.
-2. Syntax "interfaceName" by "implementationObjectName".
+2. Syntax "InterfaceName" by "implementationObjectName".
 3. All calls for the interface methods are delegated to implementation object.
 
 /* Types of classes */
 1. There are 3 types of Special classes
-    object (For singleton), enum, sealed (To create subclass in same file, equivalent to having a private primary constructor)
+    1. object (For singleton),
+    2. enum,
+    3. sealed   To prevent any other implementation to be created outside of compiled module or library,
+                subclass of a sealed class must be in same file, equivalent to having a private primary constructor
 
-2. data class, creates an implementation of class with toString, equals and hascode for all
+2. data class, creates an implementation of class with toString, equals and hashcode for all
    declared variables in primary constructor.
    data class, can have secondary constructor.
    We can destructre data class, Normal class cannot be destructure unless we have componentN() function declared.
@@ -44,24 +48,24 @@
 /* Constants */
 /* URL: https://classroom.udacity.com/courses/ud9011/lessons/ff6e5f4e-569e-4a3b-922f-be6a5d961f50/concepts/7ad9abbc-1f3f-4753-a556-89ad0072fc39*/
 1. Const keyword is used to create compile time constants
-2. Const can be used either ar Top level at outside of class, in object class (Singleton)
+2. Const can be used either at Top level at outside of class, in "Object" class (Singleton)
    or in Companion object inside normal class, it cannot be used directly inside of normal class.
 
 /* Extensions */
 1. Extension function, Extension Property, receiver nullable
 2. Extension function
    These extensions are statically applied to type of class, which means parent extension and child extension will
-   be different and cannot be override
-   These extension can only use public variable and methods
+   be different and cannot be override.
+   These extension can only use public variable and methods.
 
 3. Extension Property
    Similar to extension function.
    We have to specify get() in case of val and get() set() in case of var to create extension property.
 
 4. Receiver null extensions, are extensions which can receive null.
-   Defined as ClassName?.extensionName, we can call this extension on null object without null safety
+   Defined as ClassName?.extensionName, we can call this extension on null object without null safety.
 
-/* Generics in out*/
+/* Generics in-out*/
 1. It is related to problem of PECS (Producer Extends Consumer Supers)
     JAVA : https://stackoverflow.com/a/4343547/1112856
     Kotlin: https://stackoverflow.com/a/45516961/1112856
@@ -106,3 +110,23 @@
 1. Inline is either used for reified generics or on higher order functions
 2. When inline with higher order functions, it will replace function call with function code.
    This will avoid object creation of lambda also one less function call.
+
+/* SAM */
+1. Single Abstract Method, are interface which have single method, when we create lambdas
+   Appropriate SAM is implemented with anonymous object.
+
+/* coroutine */
+Good read:
+https://proandroiddev.com/understanding-kotlin-coroutines-with-this-mental-model-e1205e3f9670
+
+1. Coroutine are abstraction over thread, which means, they may or may not launch separate thread, call can be executed
+   on main thread itself, to achieve thread like behaviour,
+   they can suspend execution at suspension point marked with suspend keyword.
+2. It can create separate thread using Dispatchers.
+
+/* lazy load variable */
+1. var variable can be lazily assigned using lateinit property.
+   This allows us to lazily assign var while allowing var to be not null reference.
+
+2. val variable can be lazily assign using lazy() standard library function
+   This allows us to load value to val variable when it is first accessed.
