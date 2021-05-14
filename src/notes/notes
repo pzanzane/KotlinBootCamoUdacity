@@ -106,3 +106,16 @@
 1. Inline is either used for reified generics or on higher order functions
 2. When inline with higher order functions, it will replace function call with function code.
    This will avoid object creation of lambda also one less function call.
+
+/* SAM */
+1. Single Abstract Method, are interface which have single method, when we create lambdas
+   Appropriate SAM is implemented with anonymous object.
+
+/* coroutine */
+Good read:
+https://proandroiddev.com/understanding-kotlin-coroutines-with-this-mental-model-e1205e3f9670
+
+1. Coroutine are abstraction over thread, which means, they may or may not launch separate thread, call can be executed
+   on main thread itself, to achieve thread like behaviour,
+   they can suspend execution at suspension point marked with suspend keyword.
+2. It can create separate thread using Dispatchers.
